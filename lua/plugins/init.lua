@@ -27,6 +27,7 @@ return {
         "stylua",
         "html-lsp",
         "css-lsp",
+        "phpactor",
         "prettier",
         "eslint-lsp",
         "gopls",
@@ -41,6 +42,7 @@ return {
       ensure_installed = {
         "vim",
         "lua",
+        "php",
         "vimdoc",
         "html",
         "css",

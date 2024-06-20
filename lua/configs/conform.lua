@@ -7,6 +7,7 @@ local options = {
     json = { { 'prettier', "prettierd" } },
     html = { { 'prettier', "prettierd" } },
     css = { { 'prettier', "prettierd" } },
+    php = {"pint"},
   },
 
   format_on_save = {
