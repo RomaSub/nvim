@@ -2,7 +2,6 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
 map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
 map("n", "<leader>cx", function()
   require("nvchad.tabufline").closeAllBufs()
@@ -14,10 +13,10 @@ map("n", "\\", "<cmd>:vsplit <CR>", { desc = "Vertical Split" })
 -- Trouble
 
 map("n", "<leader>qx", "<cmd>Trouble<CR>", { desc = "Open Trouble" })
-map("n", "<leader>qw", "<cmd>Trouble workspace_diagnostics<CR>", { desc = "Open Workspace Trouble" })
+map("n", "<leader>qw", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Open Workspace Trouble" })
 map("n", "<leader>qd", "<cmd>Trouble  document_diagnostics<CR>", { desc = "Open Document Trouble" })
-map("n", "<leader>qq", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Open Quickfix" })
-map("n", "<leader>ql", "<cmd>Trouble loclist<CR>", { desc = "Open Location List" })
+map("n", "<leader>qq", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "Open Quickfix" })
+map("n", "<leader>ql", "<cmd>Trouble symbols<CR>", { desc = "Symbols" })
 map("n", "<leader>qt", "<cmd>Trouble <CR>", { desc = "Open Todo Trouble" })
 
 -- Tests
