@@ -1,7 +1,6 @@
 return {
   {
     "stevearc/conform.nvim", 
-    event = "BufWritePre",
     config = function()
       require "configs.conform"
     end,
@@ -46,6 +45,7 @@ return {
         "typescript",
         "javascript",
         "go",
+        "tsx",
       },
     },
   },
