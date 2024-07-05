@@ -1,6 +1,6 @@
 return {
   {
-    "stevearc/conform.nvim",
+    "stevearc/conform.nvim", 
     event = "BufWritePre",
     config = function()
       require "configs.conform"
@@ -18,7 +18,6 @@ return {
       require "configs.lspconfig"
     end,
   },
-  { "nvim-neotest/nvim-nio" },
   {
     "williamboman/mason.nvim",
     opts = {
@@ -27,7 +26,6 @@ return {
         "stylua",
         "html-lsp",
         "css-lsp",
-        "phpactor",
         "prettier",
         "eslint-lsp",
         "gopls",
@@ -42,7 +40,6 @@ return {
       ensure_installed = {
         "vim",
         "lua",
-        "php",
         "vimdoc",
         "html",
         "css",
@@ -79,42 +76,6 @@ return {
       require("better_escape").setup()
     end,
   },
-  -- {
-  --   "jackMort/ChatGPT.nvim",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("chatgpt").setup {}
-  --   end,
-  --   dependencies = {
-  --     "MunifTanjim/nui.nvim",
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-telescope/telescope.nvim",
-  --   },
-  -- },
-  {
-    "nvim-neotest/neotest",
-    event = "VeryLazy",
-    config = function()
-      require("neotest").setup {
-        adapters = {
-          require "neotest-jest" {
-            jestCommand = "npm test --",
-            jestConfigFile = "jest.config.ts",
-            env = { CI = true },
-            cwd = function(path)
-              return vim.fn.getcwd()
-            end,
-          },
-        },
-      }
-    end,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "antoinemadec/FixCursorHold.nvim",
-      "haydenmeade/neotest-jest",
-    },
-  },
   {
     "folke/neodev.nvim",
     config = function()
@@ -138,6 +99,25 @@ return {
   {
     "kevinhwang91/nvim-bqf",
     lazy = false,
+  },
+  {
+    "okuuva/auto-save.nvim",
+    cmd = "ASToggle", -- optional for lazy loading on command
+    event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
+    opts = {
+      -- your config goes here
+      -- or just leave it empty :)
+    },
+  },
+   {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end,
   },
   {
     "folke/trouble.nvim",

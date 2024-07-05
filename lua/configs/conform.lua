@@ -7,14 +7,13 @@ local options = {
     json = { { 'prettier', "prettierd" } },
     html = { { 'prettier', "prettierd" } },
     css = { { 'prettier', "prettierd" } },
-    php = {"pint"},
   },
 
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    lsp_format = 'fallback',
-  },
+  -- format_on_save = {
+  --   -- These options will be passed to conform.format()
+  --   timeout_ms = 500,
+  --   lsp_format = 'fallback',
+  -- },
 }
 
 require("conform").setup(options)

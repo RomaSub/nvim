@@ -14,7 +14,6 @@ M.treesitter = {
     "markdown_inline",
     "prisma",
     "go",
-    "php",
   },
   indent = {
     enable = true,
@@ -34,7 +33,6 @@ M.mason = {
     "clang-format",
     "gopls",
     "gradle_ls",
-    "phpactor",
   },
 }
 
