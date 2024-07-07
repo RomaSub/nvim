@@ -32,7 +32,6 @@ return {
       },
     },
   },
-
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -48,6 +47,25 @@ return {
         "tsx",
       },
     },
+  },
+{
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    event = "VeryLazy",
+    after = "nvim-treesitter",
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        textobjects = {
+          select = {
+            enable = true,
+            lookahead = true,
+            keymaps = {
+              -- Удаление аргумента вместе с запятой
+              ["aa"] = "@parameter.outer", -- Текстовый объект для аргумента
+            },
+          },
+        },
+      }
+    end
   },
   {
     "mfussenegger/nvim-lint",

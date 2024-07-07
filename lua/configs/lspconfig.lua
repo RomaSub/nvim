@@ -17,6 +17,15 @@ local function organize_imports()
   vim.lsp.buf.execute_command(params)
 end
 
+--Function to setup diagnostic display
+local function setup_diagnostics()
+  vim.diagnostic.config({
+    virtual_text = false, -- Disable virtual text
+  })
+end
+
+setup_diagnostics()
+
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
