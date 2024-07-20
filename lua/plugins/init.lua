@@ -28,7 +28,6 @@ return {
         "prettier",
         "eslint-lsp",
         "gopls",
-        "typescript-language-server",
       },
     },
   },
@@ -151,4 +150,16 @@ return {
       require("todo-comments").setup()
     end,
   }, -- To make a plugin not be loaded
+{
+  "pmizio/typescript-tools.nvim",
+  dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+  lazy = false,
+  config = function()
+    require("typescript-tools").setup {
+      settings = {
+        tsserver_locale = "ru",  -- Локаль для сообщений tsserver
+      },
+    }
+  end,
+}
 }

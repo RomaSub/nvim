@@ -3,18 +3,34 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 
-map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
+map("n", "<leader><leader>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+-- map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
 map("n", "<leader>cx", function()
   require("nvchad.tabufline").closeAllBufs()
 end, { desc = "Close All Buffers" })
 
 map("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Todo" })
-map("n", "\\", "<cmd>:vsplit <CR>", { desc = "Vertical Split" })
+map("n", "\\", "<cmd>:split <CR>", { desc = "Horizontal Split" })
+map("n", "|", "<cmd>:vsplit <CR>", { desc = "Vertical Split" })
+
+-- typescript-tools 
+map("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Go to Definition" })
+map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Hover Documentation" })
+map("n", "gi", "<Cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "Go to Implementation" })
+map("n", "gr", "<Cmd>lua vim.lsp.buf.references()<CR>", { desc = "References" })
+map("n", "<space>D", "<Cmd>lua vim.lsp.buf.type_definition()<CR>", { desc = "Type Definition" })
+
+map("n", "<space>ui", "<Cmd>TSToolsOrganizeImports<CR>", { desc = "Organize Imports" })
+map("n", "<space>ua", "<Cmd>TSToolsAddMissingImports<CR>", { desc = "Add missing Imports" })
+map("n", "<space>qq", "<Cmd>TSToolsFixAll<CR>", { desc = "Fix" })
+map("n", "<space>rf", "<Cmd>TSToolsRenameFile<CR>", { desc = "Rename file" })
+map("n", "<space>ra", "<Cmd>TSToolsFileReferences<CR>", { desc = "File references" })
+
 
 
 -- Move Lines
-map("n", "<C-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
-map("n", "<C-k>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
+-- map("n", "<C-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
+-- map("n", "<C-k>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
 map("i", "<C-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
 map("i", "<C-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 map("v", "<C-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
