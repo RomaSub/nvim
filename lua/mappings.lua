@@ -21,7 +21,7 @@ map("n", "gr", "<Cmd>lua vim.lsp.buf.references()<CR>", { desc = "References" })
 map("n", "<space>D", "<Cmd>lua vim.lsp.buf.type_definition()<CR>", { desc = "Type Definition" })
 
 map("n", "<space>ui", "<Cmd>TSToolsOrganizeImports<CR>", { desc = "Organize Imports" })
-map("n", "<space>ua", "<Cmd>TSToolsAddMissingImports<CR>", { desc = "Add missing Imports" })
+map("n", "<space>uu", "<Cmd>TSToolsAddMissingImports<CR>", { desc = "Add missing Imports" })
 map("n", "<space>qq", "<Cmd>TSToolsFixAll<CR>", { desc = "Fix" })
 map("n", "<space>rf", "<Cmd>TSToolsRenameFile<CR>", { desc = "Rename file" })
 map("n", "<space>ra", "<Cmd>TSToolsFileReferences<CR>", { desc = "File references" })
