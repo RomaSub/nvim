@@ -19,12 +19,18 @@ map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Hover Documentation"
 map("n", "gi", "<Cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "Go to Implementation" })
 map("n", "gr", "<Cmd>lua vim.lsp.buf.references()<CR>", { desc = "References" })
 map("n", "<space>D", "<Cmd>lua vim.lsp.buf.type_definition()<CR>", { desc = "Type Definition" })
-
-map("n", "<space>ui", "<Cmd>TSToolsOrganizeImports<CR>", { desc = "Organize Imports" })
-map("n", "<space>uu", "<Cmd>TSToolsAddMissingImports<CR>", { desc = "Add missing Imports" })
 map("n", "<space>qq", "<Cmd>TSToolsFixAll<CR>", { desc = "Fix" })
 map("n", "<space>rf", "<Cmd>TSToolsRenameFile<CR>", { desc = "Rename file" })
 map("n", "<space>ra", "<Cmd>TSToolsFileReferences<CR>", { desc = "File references" })
+
+--ui
+map("n", "<space>ui", "<Cmd>TSToolsOrganizeImports<CR>", { desc = "Organize Imports" })
+map("n", "<space>uu", "<Cmd>TSToolsAddMissingImports<CR>", { desc = "Add missing Imports" })
+map("n", "<space>uo", "<Cmd>TailwindConcealToggle<CR>", { desc = "включает/выключает скрытие" })
+map("n", "<space>uc", "<Cmd>TailwindColorToggle<CR>", { desc = "включает/выключает цветовые подсказки" })
+map("n", "<space>us", "<Cmd>TailwindSort<CR>", { desc = "сортирует все классы в текущем буфере" })
+
+
 
 
 

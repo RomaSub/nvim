@@ -39,6 +39,7 @@ return {
         "lua",
         "vimdoc",
         "html",
+        "prisma",
         "css",
         "typescript",
         "javascript",
@@ -161,5 +162,11 @@ return {
       },
     }
   end,
-}
+},
+  {
+  "luckasRanarison/tailwind-tools.nvim",
+  dependencies = { "nvim-treesitter/nvim-treesitter" },
+  lazy=false,
+  opts = {} -- your configuration
+  }
 }
