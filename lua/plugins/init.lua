@@ -43,6 +43,7 @@ return {
         "css",
         "typescript",
         "javascript",
+        "rust",
         "go",
         "tsx",
       },
@@ -168,5 +169,10 @@ return {
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   lazy=false,
   opts = {} -- your configuration
-  }
+  },
+  {
+  'mrcjkb/rustaceanvim',
+  version = '^5', -- Recommended
+  lazy = false, -- This plugin is already lazy
+},
 }

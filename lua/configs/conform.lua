@@ -7,6 +7,8 @@ local options = {
     json = { { 'prettier', "prettierd" } },
     html = { { 'prettier', "prettierd" } },
     css = { { 'prettier', "prettierd" } },
+    go = { { "gofumpt", "gofmt" } },
+    rust = { "rustfmt" },
   },
 
   -- format_on_save = {
