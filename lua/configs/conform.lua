@@ -9,6 +9,7 @@ local options = {
     css = { { 'prettier', "prettierd" } },
     go = { { "gofumpt", "gofmt" } },
     rust = { "rustfmt" },
+    lua = { "stylua" },
   },
 
   -- format_on_save = {

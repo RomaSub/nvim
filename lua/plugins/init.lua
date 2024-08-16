@@ -169,7 +169,7 @@ return {
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   lazy=false,
   opts = {} -- your configuration
-  },
+},
   {
   'mrcjkb/rustaceanvim',
   version = '^5', -- Recommended

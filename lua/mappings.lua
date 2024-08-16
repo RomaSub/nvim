@@ -31,6 +31,12 @@ map("n", "<space>uc", "<Cmd>TailwindColorToggle<CR>", { desc = "включает
 map("n", "<space>us", "<Cmd>TailwindSort<CR>", { desc = "сортирует все классы в текущем буфере" })
 
 
+-- rust-tools
+map("n", "<space>rr", "<Cmd>RustLsp renderDiagnostic current<CR>", { desc = "Rust render error" })
+map("n", "<space>rk", "<Cmd>RustLsp joinLines<CR>", { desc = "Rust join Lines" })
+map("n", "<space>re", "<Cmd>RustLsp flyCheck<CR>", { desc = "Rust codeAction" })
+
+
 
 
 
