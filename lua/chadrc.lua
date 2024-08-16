@@ -65,6 +65,21 @@ M.ui = {
   },
 
   hl_override = {
+    St_VisualMode = {
+      bg = "#0d0f18",
+    },
+    St_InsertMode = {
+      bg = "#0d0f18",
+    },
+    St_NormalMode = {
+      bg = "#0d0f18",
+    },
+    St_CommandMode = {
+      bg = "#0d0f18",
+    },
+    St_cwd = {
+      bg = "#0d0f18",
+    },
     NvDashAscii = {
       fg = "#90ceaa",
       bg = "#0d0f18",

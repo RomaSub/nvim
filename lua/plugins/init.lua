@@ -88,13 +88,13 @@ return {
       require("nvim-ts-autotag").setup()
     end,
   },
-  {
-    "max397574/better-escape.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("better_escape").setup()
-    end,
-  },
+  -- {
+  --   "max397574/better-escape.nvim",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("better_escape").setup()
+  --   end,
+  -- },
   {
     "folke/neodev.nvim",
     config = function()
