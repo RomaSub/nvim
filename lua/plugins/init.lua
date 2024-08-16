@@ -1,6 +1,6 @@
 return {
   {
-    "stevearc/conform.nvim", 
+    "stevearc/conform.nvim",
     config = function()
       require "configs.conform"
     end,
@@ -49,12 +49,12 @@ return {
       },
     },
   },
-{
+  {
     "nvim-treesitter/nvim-treesitter-textobjects",
     event = "VeryLazy",
     after = "nvim-treesitter",
     config = function()
-      require('nvim-treesitter.configs').setup {
+      require("nvim-treesitter.configs").setup {
         textobjects = {
           select = {
             enable = true,
@@ -66,7 +66,7 @@ return {
           },
         },
       }
-    end
+    end,
   },
   {
     "mfussenegger/nvim-lint",
@@ -128,14 +128,14 @@ return {
       -- or just leave it empty :)
     },
   },
-   {
+  {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-      require("nvim-surround").setup({
+      require("nvim-surround").setup {
         -- Configuration here, or leave empty to use defaults
-      })
+      }
     end,
   },
   {
@@ -152,27 +152,27 @@ return {
       require("todo-comments").setup()
     end,
   }, -- To make a plugin not be loaded
-{
-  "pmizio/typescript-tools.nvim",
-  dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-  lazy = false,
-  config = function()
-    require("typescript-tools").setup {
-      settings = {
-        tsserver_locale = "ru",  -- Локаль для сообщений tsserver
-      },
-    }
-  end,
-},
   {
-  "luckasRanarison/tailwind-tools.nvim",
-  dependencies = { "nvim-treesitter/nvim-treesitter" },
-  lazy=false,
-  opts = {} -- your configuration
-},
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    lazy = false,
+    config = function()
+      require("typescript-tools").setup {
+        settings = {
+          tsserver_locale = "ru", -- Локаль для сообщений tsserver
+        },
+      }
+    end,
+  },
   {
-  'mrcjkb/rustaceanvim',
-  version = '^5', -- Recommended
-  lazy = false, -- This plugin is already lazy
-},
+    "luckasRanarison/tailwind-tools.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    lazy = false,
+    opts = {}, -- your configuration
+  },
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^5", -- Recommended
+    lazy = false, -- This plugin is already lazy
+  },
 }

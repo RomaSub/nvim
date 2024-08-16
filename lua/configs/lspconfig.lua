@@ -1,4 +1,4 @@
-local configs = require("nvchad.configs.lspconfig")
+local configs = require "nvchad.configs.lspconfig"
 
 local on_attach = configs.on_attach
 local on_init = configs.on_init
@@ -7,7 +7,7 @@ local capabilities = configs.capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "clangd", "gopls", "gradle_ls", 'tailwindcss' }
+local servers = { "html", "cssls", "clangd", "gopls", "tailwindcss", "lua_ls" }
 
 -- local function organize_imports()
 --   local params = {
@@ -18,14 +18,14 @@ local servers = { "html", "cssls", "clangd", "gopls", "gradle_ls", 'tailwindcss'
 -- end
 
 -- Function to setup diagnostic display
- local function setup_diagnostics()
-   vim.diagnostic.config({
-     virtual_text = false, -- Disable virtual text
-     underline = false,
-   })
- end
+local function setup_diagnostics()
+  vim.diagnostic.config {
+    virtual_text = false, -- Disable virtual text
+    underline = false,
+  }
+end
 
- setup_diagnostics()
+setup_diagnostics()
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -37,9 +37,9 @@ for _, lsp in ipairs(servers) do
         usePlaceholders = true,
         analyses = {
           unusedparams = true,
-        }
-      }
-    }
+        },
+      },
+    },
   }
   lspconfig.prismals.setup {}
 end

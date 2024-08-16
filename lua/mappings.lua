@@ -2,7 +2,6 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
-
 map("n", "<leader><leader>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 -- map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
 map("n", "<leader>cx", function()
@@ -13,7 +12,7 @@ map("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Todo" })
 map("n", "\\", "<cmd>:split <CR>", { desc = "Horizontal Split" })
 map("n", "|", "<cmd>:vsplit <CR>", { desc = "Vertical Split" })
 
--- typescript-tools 
+-- typescript-tools
 map("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Go to Definition" })
 map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Hover Documentation" })
 map("n", "gi", "<Cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "Go to Implementation" })
@@ -27,18 +26,23 @@ map("n", "<space>rq", "<Cmd>TSToolsFileReferences<CR>", { desc = "File reference
 map("n", "<space>ui", "<Cmd>TSToolsOrganizeImports<CR>", { desc = "Organize Imports" })
 map("n", "<space>uu", "<Cmd>TSToolsAddMissingImports<CR>", { desc = "Add missing Imports" })
 map("n", "<space>uo", "<Cmd>TailwindConcealToggle<CR>", { desc = "включает/выключает скрытие" })
-map("n", "<space>uc", "<Cmd>TailwindColorToggle<CR>", { desc = "включает/выключает цветовые подсказки" })
-map("n", "<space>us", "<Cmd>TailwindSort<CR>", { desc = "сортирует все классы в текущем буфере" })
-
+map(
+  "n",
+  "<space>uc",
+  "<Cmd>TailwindColorToggle<CR>",
+  { desc = "включает/выключает цветовые подсказки" }
+)
+map(
+  "n",
+  "<space>us",
+  "<Cmd>TailwindSort<CR>",
+  { desc = "сортирует все классы в текущем буфере" }
+)
 
 -- rust-tools
 map("n", "<space>rr", "<Cmd>RustLsp renderDiagnostic current<CR>", { desc = "Rust render error" })
 map("n", "<space>rk", "<Cmd>RustLsp joinLines<CR>", { desc = "Rust join Lines" })
 map("n", "<space>re", "<Cmd>RustLsp flyCheck<CR>", { desc = "Rust codeAction" })
-
-
-
-
 
 -- Move Lines
 -- map("n", "<C-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
@@ -49,7 +53,7 @@ map("v", "<C-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 map("v", "<C-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 
 --Formatting
-map("n", "<leader>cf", function() 
+map("n", "<leader>cf", function()
   require("conform").format()
 end, { desc = "Format Code" })
 
@@ -60,8 +64,6 @@ map("n", "<leader>td", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Open Wor
 map("n", "<leader>tq", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "Open Quickfix" })
 map("n", "<leader>ts", "<cmd>Trouble symbols<CR>", { desc = "Symbols" })
 map("n", "<leader>tt", "<cmd>Trouble<CR>", { desc = "Open Todo Trouble" })
-
-
 
 -- Git
 map("n", "<leader>gl", ":Flog<CR>", { desc = "Git Log" })
