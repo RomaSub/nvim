@@ -88,13 +88,6 @@ return {
       require("nvim-ts-autotag").setup()
     end,
   },
-  -- {
-  --   "max397574/better-escape.nvim",
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("better_escape").setup()
-  --   end,
-  -- },
   {
     "folke/neodev.nvim",
     config = function()
@@ -151,7 +144,7 @@ return {
     config = function()
       require("todo-comments").setup()
     end,
-  }, -- To make a plugin not be loaded
+  },
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
@@ -168,7 +161,7 @@ return {
     "luckasRanarison/tailwind-tools.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     lazy = false,
-    opts = {}, -- your configuration
+    opts = {},
   },
   {
     "mrcjkb/rustaceanvim",
