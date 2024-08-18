@@ -7,7 +7,7 @@ local options = {
     json = { { "prettier", "prettierd" } },
     html = { { "prettier", "prettierd" } },
     css = { { "prettier", "prettierd" } },
-    go = { { "gofumpt", "gofmt" } },
+    go = { { "goimports", "gofmt" } },
     rust = { "rustfmt" },
     lua = { "stylua" },
   },
