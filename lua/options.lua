@@ -28,6 +28,10 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "redrawstatus",
 })
 
+--прокрутка вниз в нормальном режиме
+vim.api.nvim_set_keymap('n', 'j', 'v:count ? "j" : (line(".") == line("$") ? "<C-e>" : "j")', { noremap = true, expr = true, silent = true })
+--прокрутка вниз в визуальном режиме
+vim.api.nvim_set_keymap('x', 'j', 'v:count ? "j" : (line(".") == line("$") ? "<C-e>" : "j")', { noremap = true, expr = true, silent = true })
+
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
-
