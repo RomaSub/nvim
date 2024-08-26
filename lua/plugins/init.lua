@@ -1,5 +1,9 @@
 return {
   {
+    "lewis6991/gitsigns.nvim",
+    enabled = false,
+  },
+  {
     "stevearc/conform.nvim",
     config = function()
       require "configs.conform"
@@ -132,12 +136,6 @@ return {
     end,
   },
   {
-    "folke/trouble.nvim",
-    lazy = false,
-    opts = {},
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
-  {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     lazy = false,
@@ -196,5 +194,22 @@ return {
     opt = true,
     event = "InsertCharPre",
     priority = 1000,
+  },
+  {
+    "smoka7/multicursors.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "nvimtools/hydra.nvim",
+    },
+    opts = {},
+    cmd = { "MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor" },
+    keys = {
+      {
+        mode = { "v", "n" },
+        "<Leader>m",
+        "<cmd>MCstart<cr>",
+        desc = "Create a selection for selected text or word under the cursor",
+      },
+    },
   },
 }

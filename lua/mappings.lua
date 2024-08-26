@@ -60,10 +60,6 @@ end, { desc = "Format Code" })
 -- Diagnostics
 
 map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
-map("n", "<leader>td", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Open Workspace Trouble" })
-map("n", "<leader>tq", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "Open Quickfix" })
-map("n", "<leader>ts", "<cmd>Trouble symbols<CR>", { desc = "Symbols" })
-map("n", "<leader>tt", "<cmd>Trouble<CR>", { desc = "Open Todo Trouble" })
 
 -- Git
 map("n", "<leader>gl", ":Flog<CR>", { desc = "Git Log" })
