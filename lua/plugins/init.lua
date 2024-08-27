@@ -1,5 +1,13 @@
 return {
   {
+    "folke/which-key.nvim",
+    opts = {
+      plugins = {
+        marks = false,
+      },
+    },
+  },
+  {
     "lewis6991/gitsigns.nvim",
     enabled = false,
   },
@@ -196,20 +204,10 @@ return {
     priority = 1000,
   },
   {
-    "smoka7/multicursors.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "nvimtools/hydra.nvim",
-    },
-    opts = {},
-    cmd = { "MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor" },
-    keys = {
-      {
-        mode = { "v", "n" },
-        "<Leader>m",
-        "<cmd>MCstart<cr>",
-        desc = "Create a selection for selected text or word under the cursor",
-      },
-    },
+    "chentoast/marks.nvim",
+    lazy = false,
+    config = function()
+      require("marks").setup()
+    end,
   },
 }

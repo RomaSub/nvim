@@ -2,6 +2,7 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+map("n", "<leader>qq", "<cmd>q<cr>", { desc = "Quit" })
 map("n", "<leader><leader>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 -- map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
 map("n", "<leader>cx", function()
@@ -18,7 +19,7 @@ map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Hover Documentation"
 map("n", "gi", "<Cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "Go to Implementation" })
 map("n", "gr", "<Cmd>lua vim.lsp.buf.references()<CR>", { desc = "References" })
 map("n", "<space>D", "<Cmd>lua vim.lsp.buf.type_definition()<CR>", { desc = "Type Definition" })
-map("n", "<space>qq", "<Cmd>TSToolsFixAll<CR>", { desc = "Fix" })
+-- map("n", "<space>qq", "<Cmd>TSToolsFixAll<CR>", { desc = "Fix" })
 map("n", "<space>rf", "<Cmd>TSToolsRenameFile<CR>", { desc = "Rename file" })
 map("n", "<space>rq", "<Cmd>TSToolsFileReferences<CR>", { desc = "File references" })
 

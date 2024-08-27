@@ -33,5 +33,11 @@ vim.api.nvim_set_keymap('n', 'j', 'v:count ? "j" : (line(".") == line("$") ? "<C
 --прокрутка вниз в визуальном режиме
 vim.api.nvim_set_keymap('x', 'j', 'v:count ? "j" : (line(".") == line("$") ? "<C-e>" : "j")', { noremap = true, expr = true, silent = true })
 
+
+-- Блочный курсор
+vim.opt.guicursor = {
+  "n-v-c:block", 
+}
+
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
