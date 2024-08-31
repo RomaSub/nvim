@@ -5,6 +5,7 @@ local map = vim.keymap.set
 map("n", "<leader>qq", "<cmd>q<cr>", { desc = "Quit" })
 map("n", "<leader><leader>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 -- map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
+
 map("n", "<leader>cx", function()
   require("nvchad.tabufline").closeAllBufs()
 end, { desc = "Close All Buffers" })

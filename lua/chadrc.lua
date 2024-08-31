@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-  theme = "decay",
+  theme = "everforest",
   transparency = true,
   statusline = {
     theme = "vscode_colored",
@@ -58,29 +58,29 @@ M.ui = {
   },
 
   hl_override = {
-    St_VisualMode = {
-      bg = "#0d0f18",
-    },
-    St_InsertMode = {
-      bg = "#0d0f18",
-    },
-    St_NormalMode = {
-      bg = "#0d0f18",
-    },
-    St_CommandMode = {
-      bg = "#0d0f18",
-    },
-    St_cwd = {
-      bg = "#0d0f18",
-    },
-    NvDashAscii = {
-      fg = "#90ceaa",
-      bg = "#0d0f18",
-    },
-    NvDashButtons = {
-      fg = "#90ceaa",
-      bg = "#0d0f18",
-    },
+    -- St_VisualMode = {
+    --   bg = "#0d0f18", --delay
+    -- },
+    -- St_InsertMode = {
+    --   bg = "#0d0f18"--delay,
+    -- },
+    -- St_NormalMode = {
+    --   bg = "#0d0f18",--delay
+    -- },
+    -- St_CommandMode = {
+    --   bg = "#0d0f18",--delay
+    -- },
+    -- St_cwd = {
+    --   bg = "#0d0f18",--delay
+    -- },
+    -- NvDashAscii = {
+    --   fg = "#90ceaa",--delay
+    --   bg = "#0d0f18",--delay
+    -- },
+    -- NvDashButtons = {
+    --   fg = "#90ceaa",--delay
+    --   bg = "#0d0f18",--delay
+    -- },
     Comment = { italic = true },
     ["@comment"] = { italic = true },
     DiffChange = {

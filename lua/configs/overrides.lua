@@ -2,6 +2,7 @@ local M = {}
 
 M.treesitter = {
   ensure_installed = {
+    "svelte",
     "vim",
     "lua",
     "html",
@@ -23,6 +24,7 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
+    "svelteserver",
     "lua-language-server",
     "css-lsp",
     "html-lsp",

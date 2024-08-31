@@ -1,6 +1,7 @@
 local options = {
   formatters_by_ft = {
     typescript = { { "prettier", "prettierd" } },
+    svelte = { { "prettier", "prettierd" } },
     typescriptreact = { { "prettier", "prettierd" } },
     javascript = { { "prettier", "prettierd" } },
     javascriptreact = { { "prettier", "prettierd" } },
