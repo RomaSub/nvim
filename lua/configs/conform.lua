@@ -11,12 +11,13 @@ local options = {
     go = { { "goimports", "gofmt" } },
     rust = { "rustfmt" },
     lua = { "stylua" },
+    clojure = { "cljfmt" },
   },
 
   -- format_on_save = {
   --   -- These options will be passed to conform.format()
-  --   timeout_ms = 500,
-  --   lsp_format = 'fallback',
+  --   timeout_ms = 3000,
+  --   lsp_format = "fallback",
   -- },
 }
 

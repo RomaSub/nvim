@@ -2,6 +2,7 @@ local M = {}
 
 M.treesitter = {
   ensure_installed = {
+    "clojure",
     "svelte",
     "vim",
     "lua",

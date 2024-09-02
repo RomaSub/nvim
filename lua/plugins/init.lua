@@ -47,6 +47,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        "clojure",
         "svelte",
         "vim",
         "lua",
@@ -73,8 +74,10 @@ return {
             enable = true,
             lookahead = true,
             keymaps = {
-              -- Удаление аргумента вместе с запятой
               ["aa"] = "@parameter.outer", -- Текстовый объект для аргумента
+              ["ia"] = "@parameter.inner", -- Текстовый объект для аргумента
+              ["af"] = "@function.outer", -- Текстовый объект для функции
+              ["if"] = "@function.inner", -- Текстовый объект для функции
             },
           },
         },

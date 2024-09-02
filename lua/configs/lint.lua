@@ -3,9 +3,10 @@ require("lint").linters_by_ft = {
   typescript = { "eslint_d" },
   typescriptreact = { "eslint_d" },
   javascriptreact = { "eslint_d" },
-   svelte = { "eslint_d" },
+  svelte = { "eslint_d" },
   go = { "golangcilint" },
   lua = { "luacheck" },
+  clojure = { "clj-kondo" },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {

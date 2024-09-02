@@ -29,14 +29,23 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 --прокрутка вниз в нормальном режиме
-vim.api.nvim_set_keymap('n', 'j', 'v:count ? "j" : (line(".") == line("$") ? "<C-e>" : "j")', { noremap = true, expr = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "j",
+  'v:count ? "j" : (line(".") == line("$") ? "<C-e>" : "j")',
+  { noremap = true, expr = true, silent = true }
+)
 --прокрутка вниз в визуальном режиме
-vim.api.nvim_set_keymap('x', 'j', 'v:count ? "j" : (line(".") == line("$") ? "<C-e>" : "j")', { noremap = true, expr = true, silent = true })
-
+vim.api.nvim_set_keymap(
+  "x",
+  "j",
+  'v:count ? "j" : (line(".") == line("$") ? "<C-e>" : "j")',
+  { noremap = true, expr = true, silent = true }
+)
 
 -- Блочный курсор
 vim.opt.guicursor = {
-  "n-v-c:block", 
+  "n-v-c:block",
 }
 
 -- local o = vim.o
