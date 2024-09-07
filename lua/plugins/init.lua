@@ -47,6 +47,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        -- "zig",
         "clojure",
         "svelte",
         "vim",
@@ -214,4 +215,20 @@ return {
       require("marks").setup()
     end,
   },
+  {
+    "michaelb/sniprun",
+    lazy = false,
+    branch = "master",
+    config = function()
+      require("sniprun").setup {
+        snipruncolors = {
+          SniprunVirtualTextOk = { bg = "#2d3535", fg = "#f2fbfc", ctermbg = "Cyan", ctermfg = "Black" },
+          SniprunFloatingWinOk = { fg = "#66eeff", ctermfg = "Cyan" },
+          SniprunVirtualTextErr = { bg = "#881515", fg = "#f2fbfc", ctermbg = "DarkRed", ctermfg = "Black" },
+          SniprunFloatingWinErr = { fg = "#881515", ctermfg = "DarkRed", bold = true },
+        },
+      }
+    end,
+  },
+  { "gpanders/nvim-parinfer", lazy = false },
 }

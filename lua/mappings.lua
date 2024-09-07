@@ -60,7 +60,6 @@ map("n", "<leader>cf", function()
 end, { desc = "Format Code" })
 
 -- Diagnostics
-
 map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 
 -- Git
@@ -74,5 +73,12 @@ map("n", "<leader>gt", ":DiffviewToggleFile<CR>", { desc = "Git File History" })
 map("n", "<leader>[", "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>")
 map("n", "<leader>]", "<Cmd>call append(line('.'),     repeat([''], v:count1))<CR>")
 map("i", "jj", "<ESC>")
+
+
+--SnipRun
+map("n", "<leader>jr", "<Cmd>SnipRun<CR>", { desc = "Snip Run" })
+map("v", "<leader>jr", "<Cmd>SnipRun<CR>", { desc = "Snip Run" })
+map("n", "<leader>jf", "<Cmd>SnipClose<CR>", { desc = "Snip Close" })
+map("v", "<leader>jf", "<Cmd>SnipClose<CR>", { desc = "Snip Close" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

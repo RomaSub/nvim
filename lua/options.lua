@@ -6,6 +6,9 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+--zig
+vim.g.zig_fmt_autosave = 0
+
 -- status line height
 vim.opt.cmdheight = 0
 
