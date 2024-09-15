@@ -7,7 +7,7 @@ local capabilities = configs.capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "clangd", "gopls", "tailwindcss", "lua_ls", "svelte", "clojure_lsp", "zls" }
+local servers = { "html", "cssls", "gopls", "tailwindcss", "lua_ls", "svelte", "clojure_lsp", "zls" }
 
 -- local function organize_imports()
 --   local params = {
@@ -27,6 +27,16 @@ end
 
 setup_diagnostics()
 
+-- swift
+-- lspconfig.sourcekit.setup {
+--   capabilities = {
+--     workspace = {
+--       didChangeWatchedFiles = {
+--         dynamicRegistration = true,
+--       },
+--     },
+--   },
+-- }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

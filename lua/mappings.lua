@@ -2,7 +2,7 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
-map("n", "<leader>qq", "<cmd>q<cr>", { desc = "Quit" })
+map("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit" })
 map("n", "<leader><leader>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 -- map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
 

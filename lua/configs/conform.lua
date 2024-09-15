@@ -11,9 +11,9 @@ local options = {
     go = { { "goimports", "gofmt" } },
     rust = { "rustfmt" },
     lua = { "stylua" },
-    -- clojure = { "cljfmt" },
     clojure = { "zprint" },
-    -- zig = { "zigfmt" },
+    zig = { "zigfmt" },
+    -- swift = { "swiftformat" },
   },
 
   -- format_on_save = {

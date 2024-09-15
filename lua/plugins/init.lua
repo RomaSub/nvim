@@ -48,6 +48,7 @@ return {
     opts = {
       ensure_installed = {
         -- "zig",
+        -- "swift",
         "clojure",
         "svelte",
         "vim",

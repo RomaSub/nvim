@@ -7,6 +7,7 @@ require("lint").linters_by_ft = {
   go = { "golangcilint" },
   lua = { "luacheck" },
   clojure = { "clj-kondo" },
+  -- swift = { "SwiftLint" },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {

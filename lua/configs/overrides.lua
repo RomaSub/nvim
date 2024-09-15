@@ -3,6 +3,7 @@ local M = {}
 M.treesitter = {
   ensure_installed = {
     -- "zig",
+    -- "swift",
     "clojure",
     "svelte",
     "vim",
@@ -33,8 +34,6 @@ M.mason = {
     "deno",
     "prettier",
     "eslint_d",
-    "clangd",
-    "clang-format",
     "gopls",
     "gradle_ls",
   },
