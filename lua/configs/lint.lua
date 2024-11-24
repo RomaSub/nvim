@@ -7,6 +7,8 @@ require("lint").linters_by_ft = {
   go = { "golangcilint" },
   lua = { "luacheck" },
   clojure = { "clj-kondo" },
+  haskell = { "hlint" },
+  bash = { "shellcheck"}
   -- swift = { "SwiftLint" },
 }
 

@@ -1,5 +1,19 @@
 return {
   {
+    "nvchad/base46",
+    lazy = true,
+    build = function()
+      require("base46").load_all_highlights()
+    end,
+  },
+  {
+    "NvChad/ui",
+    config = function()
+      require "nvchad"
+      vim.opt.statusline = ""
+    end,
+  },
+  {
     "folke/which-key.nvim",
     opts = {
       plugins = {
@@ -49,6 +63,8 @@ return {
       ensure_installed = {
         -- "zig",
         -- "swift",
+        "haskell",
+        "pug",
         "clojure",
         "svelte",
         "vim",
@@ -216,20 +232,6 @@ return {
       require("marks").setup()
     end,
   },
-  {
-    "michaelb/sniprun",
-    lazy = false,
-    branch = "master",
-    config = function()
-      require("sniprun").setup {
-        snipruncolors = {
-          SniprunVirtualTextOk = { bg = "#2d3535", fg = "#f2fbfc", ctermbg = "Cyan", ctermfg = "Black" },
-          SniprunFloatingWinOk = { fg = "#66eeff", ctermfg = "Cyan" },
-          SniprunVirtualTextErr = { bg = "#881515", fg = "#f2fbfc", ctermbg = "DarkRed", ctermfg = "Black" },
-          SniprunFloatingWinErr = { fg = "#881515", ctermfg = "DarkRed", bold = true },
-        },
-      }
-    end,
-  },
-  { "gpanders/nvim-parinfer", lazy = false },
+  { "gpanders/nvim-parinfer" },
+  { "mg979/vim-visual-multi", lazy = false },
 }

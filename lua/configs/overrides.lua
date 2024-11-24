@@ -1,9 +1,11 @@
-local M = {}
+ocal M = {}
 
 M.treesitter = {
   ensure_installed = {
     -- "zig",
     -- "swift",
+    "haskell",
+    "pug",
     "clojure",
     "svelte",
     "vim",

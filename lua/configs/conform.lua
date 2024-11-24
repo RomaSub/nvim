@@ -13,12 +13,14 @@ local options = {
     lua = { "stylua" },
     clojure = { "zprint" },
     zig = { "zigfmt" },
+    haskell = { "ormolu" },
+    bash = { "shfmt" },
     -- swift = { "swiftformat" },
   },
 
   -- format_on_save = {
   --   -- These options will be passed to conform.format()
-  --   timeout_ms = 3000,
+  --   timeout_ms = 4000,
   --   lsp_format = "fallback",
   -- },
 }

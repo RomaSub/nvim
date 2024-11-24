@@ -50,6 +50,9 @@ vim.api.nvim_set_keymap(
 vim.opt.guicursor = {
   "n-v-c:block",
 }
+-- vim.opt.guicursor = {
+--   "n-v-c-i:block-blinkon1000-blinkoff500-blinkwait200",
+-- }
 
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
